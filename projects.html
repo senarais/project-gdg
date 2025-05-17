@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- NAVBAR SECTION -->
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="navbar-image"><img src="./img/logo.png" alt="senarais logo"></div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./index.html#service">Services</a>
+                <a href="./projects.html">Projects</a>
+                <div class="contact"><a href="https://api.whatsapp.com/send/?phone=6281908657199&text&type=phone_number&app_absent=0">Contact</a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Projects Section -->
+    <div class="projects">
+        <div class="project-title">
+            <h1>My Projects</h1>
+            <p>These are some cool shits I’ve built — from fun experiments to things I’m genuinely proud of. Each one reflects a bit of what I enjoy doing and learning.</p>
+        </div>
+
+        <div class="project-list">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./img/BioSecureLand.png" alt="BioSecureLand">
+                </div>
+                <div class="project-text">
+                    <h2>BioSecureLand Monitoring</h2>
+                    <p>This is my first competition project. I finished this project with the help of my beloved friends. in this project, my role is the Project Manager. Even tho we only ranked 12th on that competition but i am still very proud for the experience that i got. <br> <br>
+                        BioSecureLand is a WebGIS that can monitors and predict zoonotic diseases. If you are interested to see it, go click the button down below!</p>
+                    <a target="_blank" href="https://geomaster.mapid.co.id/">SEE MORE</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./img/lms.png" alt="Learning Management System">
+                </div>
+                <div class="project-text">
+                    <h2>Learning Management System (LMS)</h2>
+                    <p>This Project is currently on progress so you can't actually see it yet. <br><br>
+                    Learning Management System project is created with the framework PHP Symfony, it's a BackEnd Framework, and the LMS is all about an app that manage the students learning materials such as homeworks and schedules.</p>
+                    <a href="#">Under Maintenance</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer-about">
+            <h4>About Me</h4>
+            <a href="#">Contact Me</a>
+            <p>Copyright ©2025 All rights reserved</p>
+        </div>
+        <div class="footer-follow">
+            <h4>Follow Me</h4>
+            <p>Join my developing journey by following my social media!</p>
+            <div class="follow-icons">
+                <a target="_blank" href="https://www.youtube.com/abisena27"><i class="fa-brands fa-youtube"></i></a>
+                <a target="_blank" href="https://www.instagram.com/senarais/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/abisena-rais-50b047275/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // Close menu when navigation link is clicked
+                document.querySelectorAll('.navbar-menu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
